@@ -1,0 +1,188 @@
+@import "reset.scss"
+@import "normalize.scss"
+
+
+* ,::after ,::before 
+
+    margin: 0
+    padding: 0    
+    box-sizing: border-box
+
+img
+    margin: 0
+    padding: 0
+
+html
+    font-size: 62.5%
+
+$text-color:rgb(59, 171, 59)
+$text-fonts-P: 'Philosopher'
+$text-fonts-R: 'Roboto'
+
+@mixin body-color
+    background: linear-gradient(90deg, #a0eab1a9,#c4e5ed,#acb6f5)
+
+@mixin border
+    margin: 0
+    padding: 0
+    border: .2rem solid red
+    border-radius: 1.6rem
+
+@mixin first-liter
+    &::first-letter
+            font-size: 6.4rem
+            color: red
+            font-weight: 700
+            text-transform: uppercase
+            margin-right: 3.2rem
+
+@mixin positionCenter
+    position: absolute
+    top: 45%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+    text-align: center
+    
+                                               
+body
+    @include body-color
+    font-family: $text-fonts-P
+    font-weight: 300
+    font-size: 1.6rem
+    color: $text-color
+    letter-spacing: .2rem
+
+
+
+.header-box
+    position: relative
+    margin-bottom: 1.6rem
+    &__img
+        @include border
+    &__strong
+        font-size: 3.2rem
+        text-align: justify
+        text-indent: 3.2rem
+        @include first-liter
+
+.header-box-2
+    position: relative
+    height: 95vh
+    margin-top: 3.2rem
+    background: linear-gradient(90deg, rgba(186, 133, 84, 0.4) 0.03%, rgba(1, 1, 1, 0.7) 99%), url(../img/header-background.jpg) center / cover no-repeat scroll
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%)
+    &__logo
+        padding: 0
+        position: absolute
+        left: 3.2rem
+        top: 3.2rem
+        width: 3.2rem
+        animation-name: bottomToTop
+        animation-duration: 2s
+        animation-timing-function: ease
+    &__about
+        @include positionCenter
+        
+
+        
+.title-first
+    color: #FFFFFF
+    &__main
+        display: block
+        font-family: $text-fonts-R
+        font-style: normal
+        font-weight: 800
+        font-size: 4.8rem
+        text-transform: uppercase
+        animation-name: leftToRight
+        animation-duration: 1.7s
+        animation-delay: 1s
+        animation-timing-function: ease
+        backface-visibility: hidden // видимость скрытая visible видимый
+
+    &__secondary
+        display: block
+        font-weight: 100
+        font-size: 3.2rem
+        font-family: $text-fonts-R
+        line-height: 3rem
+        letter-spacing: .2rem
+        animation-name: rightToLeft // имя анимации
+        animation-duration: 2s // продолжительность анимации
+        animation-delay: 1s //задержка перед началом анимации
+        animation-timing-function: ease // синхронизируем анимацию
+        backface-visibility: hidden
+
+.btn
+    &:link, &:visited // связь посешение
+        display: inline-block
+        text-transform: uppercase // переводит все буквы в верхний регистр
+        text-decoration: none // отключаем декорацию
+        color: #777
+        background: white
+        margin: 2rem 4rem // margin кнопки внешние границы
+        border-radius: 2rem // радиус равен 2rem
+        transition: all .3s // продолжительность анимации all ко всем анимациям
+        position: relative
+        font-size: 1.6rem
+        text-align: center
+    &:hover
+        transform: translateY(-20%) //притодымает кнопку по оси Y вверх при наведении
+        box-shadow: 2rem 2rem .6rem rgba(43, 41, 41, 0.8) // тень у кнопки создаем
+        &::after
+            opacity: 0
+            transform: scaleX(1.5) scaleY(1.7) // увеличивает элемент в 1.5 раза
+    &:active
+        transform: translateY(5%) // опускает кнопку по оси Y вниз пи нажатии
+        box-shadow: 2rem 2rem .6rem rgba(43, 41, 41, 0.8)
+    &::after // дочерний элемент нашей кнопки
+        content: ""
+        background: white
+        width: 100%
+        height: 100%
+        border-radius: 3.2rem
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        transition: all .4s
+    &_animated
+        animation: btnToTop .5s ease-out 1.7s // имя анимации время выполнения ускорение или задержка продвижения задержка .7s
+        animation-fill-mode: backwards // время задержки перед анимацией
+        
+
+@keyframes leftToRight
+    0%
+        opacity: 0
+        transform: translateX(-5rem) // смещение по оси X
+    100%
+        opacity: 1
+        transform: translateX(0)
+
+@keyframes rightToLeft
+    0%
+        opacity: 0
+        transform: translateX(20%)
+    50%
+        transform: translateX(-5%)
+    100%
+        opacity: 1
+        transform: translate(0)
+
+@keyframes bottomToTop
+    0%
+        opacity: 0
+        transform: translateY(300%) // смещение по оси Y
+    100%
+        opacity: 1
+        transform: translateY(0%)
+
+@keyframes btnToTop
+    0%
+        opacity: 0
+        transform: translateY(100%) // смещение по оси Y
+    100%
+        opacity: 1
+        transform: translateY(0%)
