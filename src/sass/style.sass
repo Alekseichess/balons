@@ -2,7 +2,7 @@
 @import "normalize.scss"
 
 
-* ,::after ,::before 
+* ::after ,::before
 
     margin: 0
     padding: 0    
@@ -151,7 +151,9 @@ body
     &_animated
         animation: btnToTop .5s ease-out 1.7s // имя анимации время выполнения ускорение или задержка продвижения задержка .7s
         animation-fill-mode: backwards // время задержки перед анимацией
-        
+.btn-now
+    text-align: center
+      
 
 @keyframes leftToRight
     0%

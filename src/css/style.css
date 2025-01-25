@@ -361,7 +361,7 @@ template {
   display: none;
 }
 
-*, ::after, ::before {
+* ::after, ::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -506,6 +506,10 @@ body {
 .btn_animated {
   animation: btnToTop 0.5s ease-out 1.7s;
   animation-fill-mode: backwards;
+}
+
+.btn-now {
+  text-align: center;
 }
 
 @keyframes leftToRight {
