@@ -469,8 +469,8 @@ body {
   display: inline-block;
   text-transform: uppercase;
   text-decoration: none;
-  color: #777;
-  background: white;
+  color: #777777;
+  background: #FFFFFF;
   margin: 2rem 4rem;
   border-radius: 2rem;
   transition: all 0.3s;

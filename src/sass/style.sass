@@ -29,6 +29,11 @@ img
 html
     font-size: 62.5%
 
+@mixin style-link
+    display: inline-block
+    text-transform: uppercase // переводит все буквы в верхний регистр
+    text-decoration: none // отключаем декорацию
+    color: $gray-color
 
 
 @mixin body-color
@@ -127,12 +132,9 @@ body
         backface-visibility: hidden
 
 .btn
-    &:link, &:visited // связь посешение
-        display: inline-block
-        text-transform: uppercase // переводит все буквы в верхний регистр
-        text-decoration: none // отключаем декорацию
-        color: #777
-        background: white
+    &:link, &:visited // связь посешение ссылки
+        @include style-link
+        background: $white-color
         margin: 2rem 4rem // margin кнопки внешние границы
         border-radius: 2rem // радиус равен 2rem
         transition: all .3s // продолжительность анимации all ко всем анимациям
