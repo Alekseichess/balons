@@ -1,7 +1,7 @@
 @import "reset.scss"
 @import "normalize.scss"
 
-
+// Переменные которые позволяяют быстро редактировать все элементы на сайте
 $gray-color: #777777
 $broun-color-light: #ba8554
 $broun-color-darck: #a14f03
@@ -29,12 +29,23 @@ img
 html
     font-size: 62.5%
 
-@mixin style-link
+// @mixin Миксины - это возможность делать шаблоны кода и переиспользовать его. Возможно добавлять аргументы. @mixin style-link($color)
+@mixin style-link($color)
     display: inline-block
     text-transform: uppercase // переводит все буквы в верхний регистр
     text-decoration: none // отключаем декорацию
-    color: $gray-color
+    color: $color
 
+    // Шаблоны. Позволяют создавать библиотеки готового sass кода, который не компилируется в итоговый css файл, если не используем шаблон.
+%shablons
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+
+//  Функция. Позволяют создавать операции. (математические и т. д.)
+@function multiply($a, $b)
+    @return $a * $b * 8
 
 @mixin body-color
     background: linear-gradient(90deg, #a0eab1a9,#c4e5ed,#acb6f5)
@@ -133,7 +144,7 @@ body
 
 .btn
     &:link, &:visited // связь посешение ссылки
-        @include style-link
+        @include style-link($broun-color-darck)
         background: $white-color
         margin: 2rem 4rem // margin кнопки внешние границы
         border-radius: 2rem // радиус равен 2rem
