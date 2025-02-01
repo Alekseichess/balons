@@ -412,7 +412,7 @@ body {
   position: relative;
   height: 95vh;
   margin-top: 3.2rem;
-  background: linear-gradient(90deg, rgba(186, 133, 84, 0.4) 0.03%, rgba(1, 1, 1, 0.7) 99%), url(../img/header-background.jpg) center/cover no-repeat scroll;
+  background: linear-gradient(90deg, rgba(186, 133, 84, 0.4) 0.03%, rgba(161, 79, 3, 0.7) 99%), url(../img/header-background.jpg) center/cover no-repeat scroll;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%);
 }

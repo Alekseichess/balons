@@ -2,6 +2,20 @@
 @import "normalize.scss"
 
 
+$gray-color: #777777
+$broun-color-light: #ba8554
+$broun-color-darck: #a14f03
+$black-color: #000000
+$white-color: #FFFFFF
+$text-color:rgb(59, 171, 59)
+
+$text-fonts-P: 'Philosopher'
+$text-fonts-R: 'Roboto'
+
+$box-shadow: (0 .4rem .4rem rgba(0, 0, 0, .3))
+
+
+
 * ::after ,::before
 
     margin: 0
@@ -15,9 +29,7 @@ img
 html
     font-size: 62.5%
 
-$text-color:rgb(59, 171, 59)
-$text-fonts-P: 'Philosopher'
-$text-fonts-R: 'Roboto'
+
 
 @mixin body-color
     background: linear-gradient(90deg, #a0eab1a9,#c4e5ed,#acb6f5)
@@ -70,7 +82,7 @@ body
     position: relative
     height: 95vh
     margin-top: 3.2rem
-    background: linear-gradient(90deg, rgba(186, 133, 84, 0.4) 0.03%, rgba(1, 1, 1, 0.7) 99%), url(../img/header-background.jpg) center / cover no-repeat scroll
+    background: linear-gradient(90deg,rgba($broun-color-light, 0.4) 0.03%, rgba($broun-color-darck, 0.7) 99%), url(../img/header-background.jpg) center / cover no-repeat scroll
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%)
     &__logo
         padding: 0
@@ -87,7 +99,7 @@ body
 
         
 .title-first
-    color: #FFFFFF
+    color: $white-color
     &__main
         display: block
         font-family: $text-fonts-R
