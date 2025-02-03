@@ -2,25 +2,25 @@
 
 
 .header-box
-    position: relative
-    margin-bottom: 1.6rem
+    position: relative // в CSS используется для относительного позиционирования элементов. Это означает, что элемент сдвигается относительно его обычного положения, но окружающие элементы остаются на своих местах, как будто элемент никуда не перемещался.
+    margin-bottom: 1.6rem // в CSS используется для добавления внешнего отступа снизу элемента. Это свойство задает расстояние между данным элементом и следующим элементом, расположенным непосредственно под ним.
     &__img
         @include border
     &__strong
-        font-size: 3.2rem
-        text-align: justify
-        text-indent: 3.2rem
-        @include first-liter
+        display: block
+        text-align: justify // в CSS используется для выравнивания текста таким образом, чтобы строки были равномерно распределены по ширине контейнера, а пробелы между словами и переносы строк адаптировались для достижения этого эффекта.
+        @include first-letter
 
 .header-box-2
     position: relative
     height: 95vh
     margin-top: 3.2rem
     background: linear-gradient(90deg,rgba($broun-color-light, 0.4) 0.03%, rgba($broun-color-darck, 0.7) 99%), url(../img/header-background.jpg) center / cover no-repeat scroll
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%)
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%) // Свойство clip-path: polygon; в CSS используется для обрезки области элемента сложной многоугольной фигурой. Обрезка выполняется на основе координат вершин многоугольника, указанных в значении свойства. Всё, что находится вне заданной фигуры, будет невидимо.
     &__logo
         padding: 0
-        position: absolute
+        position: absolute // Свойство position: absolute; в CSS используется для абсолютного позиционирования элементов. Это означает, что элемент будет размещён относительно ближайшего родительского элемента, который имеет позиционирование, отличное от static (по умолчанию). Если у родительского элемента нет установленного позиционирования, то позиция будет отсчитываться от окна браузера.
+        // Для абсолютного позиционирования необходимо, чтобы у родительского элемента было установлено позиционирование, например, relative, absolute, или fixed.
         left: 3.2rem
         top: 3.2rem
         width: 3.2rem
@@ -29,3 +29,30 @@
         animation-timing-function: ease
     &__about
         @include positionCenter
+
+.title-first
+    color: $white-color
+    &__main
+        display: block
+        font-family: $text-fonts-R
+        font-style: normal
+        font-weight: 800
+        font-size: 4.8rem
+        text-transform: uppercase
+        animation-name: leftToRight
+        animation-duration: 1.7s
+        animation-delay: 1s
+        animation-timing-function: ease
+        backface-visibility: hidden // видимость скрытая visible видимый
+    &__secondary
+        display: block
+        font-weight: 100
+        font-size: 3.2rem
+        font-family: $text-fonts-R
+        line-height: 3rem
+        letter-spacing: .2rem
+        animation-name: rightToLeft // имя анимации
+        animation-duration: 2s // продолжительность анимации
+        animation-delay: 1s //задержка перед началом анимации
+        animation-timing-function: ease // синхронизируем анимацию
+        backface-visibility: hidden

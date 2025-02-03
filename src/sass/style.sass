@@ -1,52 +1,20 @@
 @import "reset.scss"
 @import "normalize.scss"
 
-@import "abstracts/variables.sass"
-@import "abstracts/mixins.sass"
-@import "abstracts/templates.sass"
-@import "abstracts/functions.sass"
+@import "abstract(абстракт)/variables(переменные).sass"
+@import "abstract(абстракт)/mixins(миксины).sass"
+@import "abstract(абстракт)/templates(шаблоны).sass"
+@import "abstract(абстракт)/functions(функции).sass"
 
-@import "base/animations.sass"
-@import "base/base.sass"
-@import "base/typography.sass"
-@import "base/utilities.sass"
+@import "base(базовое)/animations(анимация).sass"
+@import "base(базовое)/base(базовое).sass"
+@import "base(базовое)/typography(типография).sass"
+@import "base(базовое)/utillities(утилиты).sass"
 
-@import "components/button.sass"
-@import "components/titles.sass"
+@import "components(компоненты)/button(кнопки).sass"
+@import "components(компоненты)/titles.sass"
 
-@import "layout/header.sass"
-@import "layout/body.sass"
+@import "layout(расположение)/header.sass"
+@import "layout(расположение)/body.sass"
 
-@import "pages/home.sass"
-
-@import "reset.scss"
-@import "normalize.scss"
-
-
-       
-.title-first
-    color: $white-color
-    &__main
-        display: block
-        font-family: $text-fonts-R
-        font-style: normal
-        font-weight: 800
-        font-size: 4.8rem
-        text-transform: uppercase
-        animation-name: leftToRight
-        animation-duration: 1.7s
-        animation-delay: 1s
-        animation-timing-function: ease
-        backface-visibility: hidden // видимость скрытая visible видимый
-    &__secondary
-        display: block
-        font-weight: 100
-        font-size: 3.2rem
-        font-family: $text-fonts-R
-        line-height: 3rem
-        letter-spacing: .2rem
-        animation-name: rightToLeft // имя анимации
-        animation-duration: 2s // продолжительность анимации
-        animation-delay: 1s //задержка перед началом анимации
-        animation-timing-function: ease // синхронизируем анимацию
-        backface-visibility: hidden
+@import "pages(страницы)/home.sass"

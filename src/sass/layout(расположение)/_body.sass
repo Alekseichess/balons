@@ -1,20 +1,21 @@
 
 
 
-* ::after ,::before
+* ::after ,::before // after(добавляет содержимое после элемента) before(добавляет содержимое после элемента) псевдоэлементы
     margin: 0
     padding: 0    
-    box-sizing: border-box
+    box-sizing: border-box  // включаем границы в размер контейнера
 img
     margin: 0
     padding: 0
 html
-    font-size: 62.5%
+    font-size: 62.5% // прировняли высоту текста к 10px
 
 body
     @include body-color
-    font-family: $text-fonts-P
+    font-family: $text-fonts-R
     font-weight: 300
     font-size: 1.6rem
-    color: $text-color
-    letter-spacing: .2rem
+    // color: $text-color
+    letter-spacing: .2rem // изменение интервала между буквами в тексте
+    word-spacing: normal // изменяет растояние между стовами текста

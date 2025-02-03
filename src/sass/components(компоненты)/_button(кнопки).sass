@@ -4,26 +4,26 @@
 
 .btn
     &:link, &:visited // связь посешение ссылки
-        @include style-link($broun-color-darck)
+        @include style-link($black-color)
         background: $white-color
         margin: 2rem 4rem // margin кнопки внешние границы
         border-radius: 2rem // радиус равен 2rem
         transition: all .3s // продолжительность анимации all ко всем анимациям
-        position: relative
+        position: relative // в CSS используется для относительного позиционирования элементов. Это означает, что элемент сдвигается относительно его обычного положения, но окружающие элементы остаются на своих местах, как будто элемент никуда не перемещался.
         font-size: 1.6rem
         text-align: center
-    &:hover
+    &:hover // Псевдокласс :hover в CSS используется для изменения стилей элементов при наведении на них курсора. Это один из наиболее часто используемых псевдоклассов, который позволяет создавать интерактивные и динамичные элементы интерфейса.
         transform: translateY(-20%) //притодымает кнопку по оси Y вверх при наведении
-        box-shadow: 2rem 2rem .6rem rgba(43, 41, 41, 0.8) // тень у кнопки создаем
+        box-shadow: $box-shadow// тень у кнопки создаем
         &::after
             opacity: 0
             transform: scaleX(1.5) scaleY(1.7) // увеличивает элемент в 1.5 раза
     &:active
         transform: translateY(5%) // опускает кнопку по оси Y вниз пи нажатии
-        box-shadow: 2rem 2rem .6rem rgba(43, 41, 41, 0.8)
+        box-shadow: $box-shadow
     &::after // дочерний элемент нашей кнопки
         content: ""
-        background: white
+        background: $white-color
         width: 100%
         height: 100%
         border-radius: 3.2rem
