@@ -1,0 +1,40 @@
+
+
+
+
+.btn
+    &:link, &:visited // связь посешение ссылки
+        @include style-link($broun-color-darck)
+        background: $white-color
+        margin: 2rem 4rem // margin кнопки внешние границы
+        border-radius: 2rem // радиус равен 2rem
+        transition: all .3s // продолжительность анимации all ко всем анимациям
+        position: relative
+        font-size: 1.6rem
+        text-align: center
+    &:hover
+        transform: translateY(-20%) //притодымает кнопку по оси Y вверх при наведении
+        box-shadow: 2rem 2rem .6rem rgba(43, 41, 41, 0.8) // тень у кнопки создаем
+        &::after
+            opacity: 0
+            transform: scaleX(1.5) scaleY(1.7) // увеличивает элемент в 1.5 раза
+    &:active
+        transform: translateY(5%) // опускает кнопку по оси Y вниз пи нажатии
+        box-shadow: 2rem 2rem .6rem rgba(43, 41, 41, 0.8)
+    &::after // дочерний элемент нашей кнопки
+        content: ""
+        background: white
+        width: 100%
+        height: 100%
+        border-radius: 3.2rem
+        display: inline-block
+        position: absolute
+        top: 0
+        left: 0
+        z-index: -1
+        transition: all .4s
+    &_animated
+        animation: btnToTop .5s ease-out 1.7s // имя анимации время выполнения ускорение или задержка продвижения задержка .7s
+        animation-fill-mode: backwards // время задержки перед анимацией
+.btn-now
+    text-align: center

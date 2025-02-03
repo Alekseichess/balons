@@ -1,0 +1,31 @@
+
+
+
+.header-box
+    position: relative
+    margin-bottom: 1.6rem
+    &__img
+        @include border
+    &__strong
+        font-size: 3.2rem
+        text-align: justify
+        text-indent: 3.2rem
+        @include first-liter
+
+.header-box-2
+    position: relative
+    height: 95vh
+    margin-top: 3.2rem
+    background: linear-gradient(90deg,rgba($broun-color-light, 0.4) 0.03%, rgba($broun-color-darck, 0.7) 99%), url(../img/header-background.jpg) center / cover no-repeat scroll
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 86%)
+    &__logo
+        padding: 0
+        position: absolute
+        left: 3.2rem
+        top: 3.2rem
+        width: 3.2rem
+        animation-name: bottomToTop
+        animation-duration: 2s
+        animation-timing-function: ease
+    &__about
+        @include positionCenter

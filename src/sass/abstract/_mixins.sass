@@ -1,0 +1,33 @@
+
+
+// @mixin Миксины - это возможность делать шаблоны кода и переиспользовать его. Возможно добавлять аргументы. @mixin style-link($color)
+@mixin style-link($color)
+    display: inline-block
+    text-transform: uppercase // переводит все буквы в верхний регистр
+    text-decoration: none // отключаем декорацию
+    color: $color
+
+@mixin body-color
+    background: linear-gradient(90deg, #a0eab1a9,#c4e5ed,#acb6f5)
+
+@mixin border
+    margin: 0
+    padding: 0
+    border: .2rem solid red
+    border-radius: 1.6rem
+
+@mixin first-liter
+    &::first-letter
+            font-size: 6.4rem
+            color: red
+            font-weight: 700
+            text-transform: uppercase
+            margin-right: 3.2rem
+
+@mixin positionCenter
+    position: absolute
+    top: 45%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 100%
+    text-align: center
