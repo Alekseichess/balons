@@ -1,4 +1,42 @@
 
+.title-first
+    color: $white-color
+    &__main
+        display: block
+        font-family: $text-fonts-R
+        font-style: normal
+        font-weight: 800
+        font-size: 4.8rem
+        text-transform: uppercase
+        animation-name: leftToRight
+        animation-duration: 1.7s
+        animation-delay: 1s
+        animation-timing-function: ease
+        backface-visibility: hidden // видимость скрытая visible видимый
+    &__secondary
+        display: block
+        font-weight: 100
+        font-size: 3.2rem
+        font-family: $text-fonts-R
+        line-height: 3rem
+        letter-spacing: .2rem
+        animation-name: rightToLeft // имя анимации
+        animation-duration: 2s // продолжительность анимации
+        animation-delay: 1s //задержка перед началом анимации
+        animation-timing-function: ease // синхронизируем анимацию
+        backface-visibility: hidden
 
-
-
+.title-second
+    &__main
+        font-size: 3.6rem
+        letter-spacing: 1rem //межбуквенный интевал
+        text-transform: uppercase // делаем буквы заглавными
+        font-weight: 800
+        background: linear-gradient(90deg, rgba($broun-color-light, 0.7 ) 0.03%, rgba($broun-color-darck, 0.7) 99.94%) center no-repeat
+        -webkit-background-clip: text // помещаем фон под буквы
+        color: transparent // делаем буквы прозрачными
+        transition: all .5s // добавим плавности в анимацию
+        &:hover
+            transform: skewY(2deg) skewX(15deg) scaleY(1.1) // смещение на 2 градуса по оси Y , смещение на 15 градусов по оси X и увеличивае элемент по оси Y в 1.1 раза тоесть на 10%
+            text-shadow: $h2-shadom
+            backface-visibility: hidden // убирает подергивание тени
