@@ -40,3 +40,29 @@
             transform: skewY(2deg) skewX(15deg) scaleY(1.1) // смещение на 2 градуса по оси Y , смещение на 15 градусов по оси X и увеличивае элемент по оси Y в 1.1 раза тоесть на 10%
             text-shadow: $h2-shadom
             backface-visibility: hidden // убирает подергивание тени
+
+.header-main
+    &__text
+        border: .1rem solid red
+        border-radius: 1rem
+        background: red
+        &:hover
+            transform: skewY(10deg) scaleY(2.4)
+    &__img
+        text-align: center
+        border: .1rem solid red
+        border-radius: 1rem
+        background: red
+    &__h3
+        text-transform: uppercase
+        font-size: 2rem
+        font-weight: 700
+    &__paragraph
+        text-align: justify
+        font-family: $text-fonts-P
+        color: $white-color
+        font-size: 1.6rem
+        text-indent: 2.5rem
+        &::first-letter
+            color: green
+            font-size: 3rem
