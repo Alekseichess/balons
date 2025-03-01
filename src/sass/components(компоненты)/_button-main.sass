@@ -1,0 +1,19 @@
+.btn-main
+    &:link, &:visited // связь посешение ссылки
+        display: inline-block
+        font-size: 1.6rem
+        letter-spacing: .2rem
+        font-weight: 700
+        color: $gray-color
+        text-decoration: none
+        padding: .1rem
+        border-bottom: .1rem $gray-color solid
+    &:hover // Псевдокласс :hover в CSS используется для изменения стилей элементов при наведении на них курсора. Это один из наиболее часто используемых псевдоклассов, который позволяет создавать интерактивные и динамичные элементы интерфейса.
+        background-color: $broun-color-darck
+        color: $white-color
+        box-shadow: $box-shadow
+        transform: translateY(-.2rem)
+        transition: .5 all
+    &:active
+        transform: translateY(0rem) 
+            
